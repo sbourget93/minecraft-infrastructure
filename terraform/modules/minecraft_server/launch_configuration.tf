@@ -20,7 +20,7 @@ resource "aws_launch_configuration" "minecraft" {
 
     cd minecraft-server/
     chmod +x ./bootstrap.sh
-    ./bootstrap.sh
+    ./bootstrap.sh ${var.server_name}
   EOF
   iam_instance_profile = "${aws_iam_instance_profile.ec2-minecraft-instance-profile.name}"
 }
