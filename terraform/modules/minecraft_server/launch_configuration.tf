@@ -16,9 +16,9 @@ resource "aws_launch_configuration" "minecraft" {
     sudo yum update -y
     sudo yum install git -y
 
-    git clone --single-branch --branch "${var.branch_name}" https://github.com/sbourget93/minecraft.git
+    git clone --single-branch --branch "${var.branch_name}" https://github.com/sbourget93/minecraft-server.git
 
-    cd minecraft/
+    cd minecraft-server/
     chmod +x ./bootstrap.sh
     ./bootstrap.sh
   EOF
