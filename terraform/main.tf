@@ -14,9 +14,9 @@ terraform {
 // This should onbe destroyed if no minecraft servers are running.
 module "global" {source = "./modules/global"}
 
-module "butt_land" { source = "./modules/minecraft_server"
-  server_name = "butt_land"
-  branch_name = "butt_land"
+module "s2" { source = "./modules/minecraft_server"
+  server_name = "s2"
+  branch_name = "s2"
   security_group_ids = "${module.global.security_group_ids}"
   associate_address_policy_arn = "${module.global.associate_address_policy_arn}"
 }
